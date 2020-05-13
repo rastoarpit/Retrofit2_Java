@@ -6,6 +6,8 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -39,7 +41,9 @@ public interface JsonPlaceHolderApi {
     @GET("posts/{id}/comments")
     Call<List<Comment>> getCommentsOnPost(@Path("id") int postId);
 
+    //alternatively we can also use @HeaderMap Map<String, String> headers instead of @Header (Dynamic_Header) String headerValue
+    @Headers({"Static-Header1: 123", "Static-Header2: 456"})
     @POST("posts")
-    Call<Post> createPost(@Body Post post);
-    
+    Call<Post> createPost(@Header("Dynamic_Header") String headerValue,
+                          @Body Post post);
 }
