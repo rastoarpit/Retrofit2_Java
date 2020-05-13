@@ -21,6 +21,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
 }
 
 android {
@@ -42,5 +47,6 @@ dependencies {
     //Retrofit libraries
     implementation 'com.squareup.retrofit2:retrofit:2.8.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
-
+    //Logging interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.6.0")
 }
