@@ -1,4 +1,4 @@
-# Retrofit2 Java
+# Retrofit2 Impementation in Android using Java
 This is an example project to implement Retrofit2 in Android using Java
 
 I am following coding in flow tutorial to create network request using Retorfit2
